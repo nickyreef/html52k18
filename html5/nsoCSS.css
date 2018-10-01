@@ -1,17 +1,143 @@
 body {
     background-color: grey;
+    background: url("ressources/koghi.png") no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
 }
 
 nav ul li {
     /* font-size: x-large; */
 }
 
+header{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 75%;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 10px;
+    font-family: "Mali";
+    text-shadow: 0 0 5px green;
+}
+
 header h1 {
     color: darkgreen;
 }
 
+nav{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 75%;
+    margin: 10px auto;
+    padding: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child{
+    border-right: none;
+}
+
+li a{
+    height: 30px;
+    line-height: 30px;
+    margin: 0 15 15;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 25px;
+}
+
+li a:hover{
+    color: green;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 75%;
+    margin: 10px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    
+}
+
+section p {
+    padding: 15px;
+    /* text-align: justify;
+    padding: 15px;
+    column-count: 3;
+    color: #0c2427; */
+}
+
 footer {
-    color: crimson;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 75%;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-family: "Mali";
+    text-shadow: 0 0 5px green;
+}
+
+#tarifs{
+
+}
+
+#tarifs table{
+    text-align: center;
+    width: 600px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#tarifs table thead{
+    background-color: rgba(0, 0, 175, 0.25);
+    line-height: 44px;
+}
+
+#tarifs table thead th{
+    padding: 10px;
+    margin: 0px;
+    height: 44px;
+    font-size: 14px;
+}
+
+#tarifs table tr {
+    border-bottom: 1px solid #ccc;
+}
+
+#tarifs table tr:last-child{
+    border-bottom: none;
+}
+
+#tarifs table tr td{
+    height: 40px;
+}
+
+.coche{
+    background: url("ressources/css_sprites.png") -10px -10px;
+}
+
+.croix{
+    background: url("ressources/css_sprites.png") -80px -10px;
+}
+
+.coche, .croix{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
 }
 
 .slider {
@@ -19,5 +145,7 @@ footer {
 }
 
 #presentation {
-    color: blue;
+    text-align: justify;
+    column-count: 3;
+    color: #0c2427;
 }

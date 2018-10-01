@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" href="nsoCSS.css">
         <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+        <!--<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>-->
         <title>Vel'Aventure - bike NC</title>
     </head>
     <body>
@@ -44,6 +46,7 @@
         </section>
         <section id="trouver">
             <!-- <article>Nous trouver</article> -->
+            <div id="map"></div>
         </section>
         <section id="tarifs">
             <!-- <article>Tarifs</article> -->
@@ -91,5 +94,18 @@
             ©nso - 2018
             <a class="btn2Top" href="#top">Retour en haut</a>
         </footer>
+
+        <script>
+            function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(-22.177562, 166.507926),
+                zoom: 10,
+                // mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfr1KFIX-WbuG1NRW--LZmo8MPEqxYsOg&callback=myMap"></script>
     </body>
 </html>

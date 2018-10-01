@@ -175,6 +175,18 @@ footer {
     color: #0c2427;
 }
 
+/* #trouver{
+    width:800px;
+} */
+
+#map{
+    margin: 0 auto;
+    width: 100%;     
+    /* width:800px; */
+    height:500px;
+    border-radius: 10px;
+}
+
 .btn2Top {
     float: right;
     padding: 0 15px;

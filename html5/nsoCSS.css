@@ -1,12 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: grey;
     background: url("ressources/koghi.png") no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
-}
-
-nav ul li {
-    /* font-size: x-large; */
 }
 
 header{
@@ -56,7 +56,7 @@ nav ul li a{
     margin: 0 25px;
 }
 
-li a:hover{
+nav ul li a:hover{
     color: green;
 }
 
@@ -81,6 +81,7 @@ section p {
 footer {
     background-color: rgba(255, 255, 255, 0.75);
     width: 75%;
+    height: 50px;
     text-align: center;
     margin: 10px auto;
     border-radius: 10px;
@@ -88,6 +89,10 @@ footer {
     -moz-border-radius: 10px;
     font-family: "Mali";
     text-shadow: 0 0 5px green;
+}
+
+footer p {
+    padding-top: 15px;
 }
 
 #tarifs{
@@ -187,9 +192,70 @@ footer {
     border-radius: 10px;
 }
 
-.btn2Top {
-    float: right;
-    padding: 0 15px;
+#vershaut {
+    position: fixed;
+    bottom: 0px;
+    right: 150px;
+    width: 50px;
+    height: 50px;
+}
+
+@media only screen and (max-device-width:500px){   
+    body {
+        background: none;
+        background-color: #0c2427;
+    } 
+
+    header{
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+
+    nav {
+        width: 95%;
+        height: auto;
+    }
+
+    nav ul {
+        position: relative;
+        /* display: none; */
+    }
+    /*Create vertical spacing*/
+    nav ul li {
+        /* float: none; */
+        border-bottom: #0c2427 1px solid;
+        /* margin: auto 0 0; */
+        padding-top: 35px;
+        height: 70px;
+        display: block;
+    }
+    /*Make all menu links full width*/
+    nav ul li, nav ul li a {
+        width: 100%;
+        display: block;
+        font-size: 45px;
+    }
+
+    #trouver, #presentation, #tarifs, #tarifs table, footer{
+        width: 95%;
+    }
+
+    #presentation{
+        column-count: 1;
+    }
+
+    #tarifs, #tarifs thead tr th{
+        font-size: 35px;
+    }
+
+    #tarifs table tr {
+        border-bottom: 1px solid #404040;
+    }
+
+    #vershaut{
+        display: none;
+    }
 }
 
 @keyframes AutoSlide{

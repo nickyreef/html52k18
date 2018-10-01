@@ -175,6 +175,11 @@ footer {
     color: #0c2427;
 }
 
+.btn2Top {
+    float: right;
+    padding: 0 15px;
+}
+
 @keyframes AutoSlide{
     0%, 15%, 100%{
         left: 0px;

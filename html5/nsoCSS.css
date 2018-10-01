@@ -42,11 +42,11 @@ nav ul li{
     border-right: 1px solid #bbb;
 }
 
-li:last-child{
+nav ul li:last-child{
     border-right: none;
 }
 
-li a{
+nav ul li a{
     height: 30px;
     line-height: 30px;
     margin: 0 15 15;
@@ -91,14 +91,16 @@ footer {
 }
 
 #tarifs{
-
+    width: 600px;
 }
 
 #tarifs table{
     text-align: center;
+    border-radius: 10px;
     width: 600px;
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 15px;
 }
 
 #tarifs table thead{
@@ -107,6 +109,7 @@ footer {
 }
 
 #tarifs table thead th{
+    border-radius: 10px;
     padding: 10px;
     margin: 0px;
     height: 44px;
@@ -141,11 +144,45 @@ footer {
 }
 
 .slider {
-    color: coral;
+    position: relative;
+    width: 800px;
+    height: 350px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 300%;
+    animation-name: AutoSlide; 
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+}
+
+.slider ul li {
+    display: inline;
 }
 
 #presentation {
     text-align: justify;
     column-count: 3;
     color: #0c2427;
+}
+
+@keyframes AutoSlide{
+    0%, 15%, 100%{
+        left: 0px;
+    }
+    35%,50%{
+        left: -100%;
+    }
+    70%,85%{
+        left: -200%;
+    }
 }

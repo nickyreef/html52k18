@@ -4,9 +4,66 @@
         <meta charset= "utf-8">
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" href="formCSS.css">
-        <title>Formulaire d'inscription</title>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <title>Newsletter form</title>
     </head>
     <body>
-
+        <header>
+            <h1>Newsletter inscription</h1>
+        </header>
+        <form id="inscriptionForm">
+            <section id="identity">
+                <fieldset><legend>Identité</legend>
+                    <div class="contener">
+                        <div><label>Nom :</label><input type="text" name="nom"></div>
+                        <div><label>Prénom :</label><input type="text" name="prenom"></div>
+                        <div>
+                            <label>Sexe :</label><br>
+                            <div class="genderRadio">
+                                <input type="radio" name="sexe" value="homme">Homme<br>
+                                <input type="radio" name="sexe" value="femme">Femme
+                            </div>
+                        </div>
+                        <div><label>@ email :</label><input type="email" name="email"></div>
+                        <div><label>Pseudo :</label><input type="text" name="pseudo"></div>
+                    </div>
+                </fieldset>
+            </section>
+            <section id="adresse">
+                    <fieldset><legend>Adresse</legend>
+                        <div class="contener">
+                            <div><label>Adresse :</label><textarea type="" name="adressePhy">Adresse complète</textarea></div>
+                            <div><label>Code postal :</label><input type="number" name="postcode"></div>
+                            <div>
+                                <label>Ville :</label>
+                                <select name="ville" form="inscriptionForm">
+                                    <option value="noumea">Nouméa</option>
+                                    <option value="koutio">Koutio</option>
+                                    <option value="dumbea">Dumbéa</option>
+                                    <option value="paita">Paita</option>
+                                    <option value="tontouta">Tontouta</option>
+                                    <option value="montdore">Mont-Dore</option>
+                                </select>
+                            </div>
+                            <div><label>Téléphone :</label><input type="tel" name="tel"></div>
+                        </div>
+                    </fieldset>
+            </section>
+            <section id="password">
+                <fieldset><legend>Sécurité</legend>
+                    <div class="contener">
+                        <div><label>Mot de passe :</label><input type="password" name="password"></div>
+                        <div><label>Confirmation :</label><input type="password" name="pwdconfirm"></div>
+                    </div>
+                </fieldset>
+            </section>
+            <section id="submitForm">
+                <div class="contenerBtn">
+                    <input type="checkbox" name="confirm" id="confirmCheck"><label class="confirmlbl" for="confirmCheck">Je souhaite m'inscrire à la newsletter</label><br>
+                    <button type="submit" form="inscriptionForm" value="submit">S'inscrire</button>
+                    <button type="reset" form="inscriptionForm" value="reset">Réinitialiser</button>
+                </div>
+            </section>
+        </form>
     </body>
 </html>

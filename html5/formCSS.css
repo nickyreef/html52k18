@@ -1,0 +1,80 @@
+body {
+    background-color: #202d42;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+label, legend, header, button, select, input{
+    font-family: "Inconsolata";
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 65%;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-shadow: 0 0 5px darkslategray;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.55);
+    width: 65%;
+    margin: 10px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;   
+}
+
+fieldset{
+    margin: 10px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;   
+}
+
+.contener div{
+    width: 90%;
+    margin: 5px auto;
+}
+
+label{
+    padding: 0 25px 0;
+    display: block;
+    float: left;
+    width: 150px;
+}
+
+input, textarea, select{
+    width: 60%;
+}
+
+.genderRadio{
+    font-family: "Inconsolata";
+    width: 50%;
+    padding: 0px 195px 0;
+}
+
+input[type="radio"] {
+    width: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.confirmlbl{
+    width: 300px;
+    /* float: left; */
+    margin-left: 25px;
+}
+
+.contenerBtn input{
+    float: left;
+    width: 25px;
+}
+
+.contenerBtn button{
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 11px auto;
+    box-shadow: 10px 5px 5px #202d42;
+}

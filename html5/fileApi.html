@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang= "fr">
+    <head>
+        <meta charset= "utf-8">
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="nsoCSS.css">
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+        <script src="wizard.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>-->
+        <title>File API</title>
+    </head>
+    <body>
+        <header>
+            <h1>HTML5 File API</h1>
+        </header>
+        <section class="tab" id="def">
+            <h1>Qu'est-ce que c'est?</h1>
+            <p>L'API (Application Programming Interface) nommée « File » est une API fournie par HTML5.</p>
+        </section>
+        <section class="tab" id="utilite">
+            <h1>A quoi ça sert?</h1>
+            <ul>
+                <li>L'API File permet de manipuler les fichiers au travers d'un objet File qui hérite lui-même de l'objet Blob, conçu pour manipuler les données binaires.</li>
+                    <ul>
+                        <li>Rappel d'un objet Blob
+                            Un objet de type Blob est une structure représentant des données binaires disponibles uniquement en lecture seule.
+                            La plupart du temps, vous rencontrerez ces objets uniquement lorsque vous manipulerez des fichiers, car ces objets représentent les données binaires du fichier ciblé.
+                        </li>
+                        <li>Rappel d'un objet File
+                            Les objets File possèdent un nom bien représentatif puisqu'ils permettent de manipuler les fichiers.
+                            Leur particularité est qu'ils héritent des propriétés et méthodes des objets Blob, voilà pourquoi nous ne créerons quasiment jamais ces derniers par nous-mêmes.
+                            L'objet File possède en plus deux propriétés:
+                            - name
+                            - lastModifiedDate
+                        </li>
+                    </ul>
+                    
+                
+                <li>Il est maintenant possible de lire le contenu d'un fichier sans avoir à passer par un quelconque serveur.
+                        Les fichiers peuvent être utilisés au travers de plusieurs autres technologies telles que le javascript ou la balise "canvas".</li>
+            </ul>
+        </section>
+        <section class="tab" id="utilisation">
+            <h1>Comment on s'en sert?</h1>
+            <p>L'API que nous allons découvrir n'est pas utilisable seule. Autrement dit, elle nécessite d'être appelée par diverses technologies permettant son accès et lui fournissant les fichiers qu'elle peut manipuler.
+                    Cette API a été conçue de cette manière afin d'éviter que ce ne soit vous, développeurs, qui choisissiez quel fichier lire sur l'ordinateur du client.
+                    Si cette sécurité n’existait pas, les conséquences pourraient être désastreuses.</p>
+        </section>
+        <section class="tab" id="utilisation">
+            <h1>Pré-requis</h1>
+            <ul>
+                <li>HTML5</li>
+                <li>javascript</li>
+            </ul>
+        </section>
+        <section class="tab" id="utilisation">
+            <h1>Y'a-t-il une alternative?</h1>
+            <ul>
+                <li>PHP</li>
+                <li>Ajax</li>
+                <li>Anciennement: Java avec les applets</li>
+            </ul>
+        </section>
+        <section class="tab" id="tarifs">
+            <h1>File API - Exemple</h1>
+            <p>&lt;input id="fileinput" type="file" multiple&gt;</p>
+            <a href="https://www.w3.org/TR/FileAPI/#APIASynch">W3C File API</a>
+            <input id="fileinput" type="file" multiple>
+            <table ><tbody id="recapitulatif">
+            </tbody>
+            </table>
+        </section>
+
+        <div class="btns">
+            <!-- <div> -->
+                <button class="demoBtn" type="button" id="prevBtn" onclick="nextPrev(-1)">Précédent</button>
+                <button class="demoBtn" type="button" id="nextBtn" onclick="nextPrev(1)">Suivant</button>
+            <!-- </div> -->
+        </div>
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+
+        <script>
+            var currentTab = 0; // Current tab is set to be the first tab (0)
+            showTab(currentTab); // Display the current tab
+
+            function showTab(n) {
+            // This function will display the specified tab of the form ...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            // ... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+                document.getElementById("nextBtn").style.display = "inline";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                // document.getElementById("nextBtn").innerHTML = "Submit";
+                document.getElementById("nextBtn").style.display = "none";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Suivant";
+                document.getElementById("nextBtn").style.display = "inline";
+            }
+            // ... and run a function that displays the correct step indicator:
+            fixStepIndicator(n)
+            }
+
+            function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form... :
+            // if (currentTab >= x.length) {
+            //     //...the form gets submitted:
+            //     document.getElementById("regForm").submit();
+            //     return false;
+            // }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+            }
+
+            function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class to the current step:
+            x[n].className += " active";
+            }
+        </script>
+
+        <script>
+                var upload = document.getElementsByTagName('input')[0],
+                recapitulatif = document.getElementById('recapitulatif');
+
+                function createRecap(file) {
+
+                    var reader = new FileReader();
+
+                    reader.addEventListener('load', function() {
+                        var trElement = document.createElement('tr');
+
+                        /* Name */
+                        var tdElement = document.createElement('td');
+                        tdElement.innerHTML = file.name;
+                        trElement.appendChild(tdElement);
+
+                        /* Size */
+                        tdElement = document.createElement('td');
+                        tdElement.innerHTML = file.size;
+                        trElement.appendChild(tdElement);
+
+                        /* Type */
+                        tdElement = document.createElement('td');
+                        tdElement.innerHTML = file.type;
+                        trElement.appendChild(tdElement);
+                    
+                        if (file.type.indexOf('image') >= 0) {
+                            tdElement = document.createElement('td');
+                            trElement.appendChild(tdElement);
+
+                            var imgElement = document.createElement('img');
+                            imgElement.style.maxWidth = '150px';
+                            imgElement.style.maxHeight = '150px';
+                            imgElement.src = this.result;
+                            tdElement.appendChild(imgElement);
+                        }
+
+                        recapitulatif.appendChild(trElement);
+                    }), false;
+
+                    reader.readAsDataURL(file);
+                }
+
+                upload.onchange = function (e) {
+
+                    while (recapitulatif.firstChild) {
+                        recapitulatif.removeChild(recapitulatif.firstChild);
+                    }
+
+                    var listeFile = upload.files,
+                        nbFiles = listeFile.length;
+
+                    for (var i = 0; i < nbFiles; i++) {
+                        createRecap(listeFile[i]);
+                    }
+                };
+            </script>
+    </body>
+</html>

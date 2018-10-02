@@ -15,8 +15,8 @@
             <section id="identity">
                 <fieldset><legend>Identité</legend>
                     <div class="contener">
-                        <div><label>Nom :</label><input type="text" name="nom"></div>
-                        <div><label>Prénom :</label><input type="text" name="prenom"></div>
+                        <div><input type="text" name="nom" placeholder="Nom"></div>
+                        <div><input type="text" name="prenom" placeholder="Prénom"></div>
                         <div>
                             <label>Sexe :</label><br>
                             <div class="genderRadio">
@@ -24,18 +24,18 @@
                                 <input type="radio" name="sexe" value="femme">Femme
                             </div>
                         </div>
-                        <div><label>@ email :</label><input type="email" name="email" placeholder="email@exemple.com"></div>
-                        <div><label>Pseudo :</label><input type="text" name="pseudo"></div>
+                        <div><input type="email" name="email" placeholder="email@exemple.com"></div>
+                        <div><input type="text" name="pseudo" placeholder="Pseudo"></div>
                     </div>
                 </fieldset>
             </section>
             <section id="adresse">
                     <fieldset><legend>Adresse</legend>
                         <div class="contener">
-                            <div><label>Adresse :</label><textarea type="" name="adressePhy">Adresse complète</textarea></div>
-                            <div><label>Code postal :</label><input type="number" name="postcode"></div>
+                            <div><label>Adresse :</label><br><textarea type="" name="adressePhy">Adresse complète</textarea></div>
+                            <div><input type="number" name="postcode" placeholder="Code postal"></div>
                             <div>
-                                <label>Ville :</label>
+                                <label>Ville :</label><br>
                                 <select name="ville" form="inscriptionForm">
                                     <option value="noumea">Nouméa</option>
                                     <option value="koutio">Koutio</option>
@@ -45,15 +45,15 @@
                                     <option value="montdore">Mont-Dore</option>
                                 </select>
                             </div>
-                            <div><label>Téléphone :</label><input type="tel" name="tel"></div>
+                            <div><input type="tel" name="tel" placeholder="Téléphone"></div>
                         </div>
                     </fieldset>
             </section>
             <section id="password">
                 <fieldset><legend>Sécurité</legend>
                     <div class="contener">
-                        <div><label>Mot de passe :</label><input type="password" name="password" required></div>
-                        <div><label>Confirmation :</label><input type="password" name="pwdconfirm" required></div>
+                        <div><input type="password" name="password" required placeholder="Mot de passe"></div>
+                        <div><input type="password" name="pwdconfirm" required placeholder="Confirmation mot de passe"></div>
                     </div>
                 </fieldset>
             </section>

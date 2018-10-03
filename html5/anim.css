@@ -1,0 +1,129 @@
+body {
+    background-color: #202d42;
+    background: url("ressources/anim.jpg") no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/* label, legend, header, button, select, input{
+    font-family: "Inconsolata";
+}
+
+legend{
+    font-weight: bold;
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 50%;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-shadow: 0 0 5px darkslategray;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;   
+}
+
+fieldset{
+    margin: 10px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;   
+}
+
+.contener div{
+    width: 65%;
+    margin: 5px auto;
+}
+
+label{
+    padding: 0 ;
+    display: block;
+    float: left;
+    width: 150px;
+}
+
+input, textarea, select{
+    width: 100%;
+    height: 35px;
+}
+
+.genderRadio{
+    font-family: "Inconsolata";
+    width: 50%;
+    padding: 0;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.confirmlbl{
+    width: 300px;
+    margin-left: 25px;
+}
+
+.contenerBtn input{
+    float: left;
+    width: 25px;
+    height: 20px;
+}
+
+.contenerBtn button{
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 11px auto;
+    box-shadow: 10px 5px 5px #202d42;
+} */
+
+/***** animation *****/
+#animation{
+    /* animation: slideIn;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    
+    /* animation: slideIn 10s infinite alternate; */
+    color: white;
+}
+
+.box{
+    display: block;
+    border: solid 1px #0000FF;
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    color: crimson;
+    transition: width 2s, height 2s, background-color 2s,transform 2s;
+}
+
+.box:hover{
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    transform: rotate(720deg);
+}
+
+@keyframes slideIn{
+    300%{
+        margin-left: 100%;
+        margin-left: 0%;
+        width: 100%;
+    }
+    75%{
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
+}

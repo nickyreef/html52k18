@@ -52,32 +52,94 @@ img{
 }
 
 .newcalcontent{
-    display: block;
+    /* display: block; */
     position: fixed;
     bottom: 168px;
     right: 110px;
-    height: 55px;
+    /* height: 55px;
     width: 55px;
     background-color:rgba(0, 0, 0, 0,0.5);
     color: #000;
     opacity: 0;
-    transition: width 2s, height 2s, background-color 2s;
+    transition: width 2s, height 2s, background-color 2s; */
 }
 
 .newcalcontent:hover{
     background-color:rgba(204, 204, 204, 0.85);
     opacity: 1;
     width: 350px;
-    height: 600px;
+    height: 50px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
+    z-index: 99;
 }
 
 .aussie1{
     position: fixed;
     bottom: 175px;
     right: 185px;
+}
+
+.newcalcontent, .australiacontent1, .australiacontent2, .australiacontent3, .newzelandcontent1, .indiacontent1, .francecontent1{
+    display: block;
+    height: 55px;
+    width: 55px;
+    background-color:rgba(000, 000, 000, 0.5);
+    color: #000;
+    opacity: 0;
+    transition: width 2s, height 2s, background-color 2s;
+}
+
+.australiacontent1{
+    position: fixed;
+    bottom: 175px;
+    right: 185px;
+}
+
+.australiacontent1:hover{
+    background-color:rgba(204, 204, 204, 0.85);
+    opacity: 1;
+    width: 350px;
+    height: 130px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    z-index: 99;
+}
+
+.australiacontent2{
+    position: fixed;
+    bottom: 115px;
+    right: 215px;
+}
+
+.australiacontent2:hover{
+    background-color:rgba(204, 204, 204, 0.85);
+    opacity: 1;
+    width: 350px;
+    height: 100px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    z-index: 99;
+}
+
+.australiacontent3{
+    position: fixed;
+    bottom: 155px;
+    right: 400px;
+}
+
+.australiacontent3:hover{
+    background-color:rgba(204, 204, 204, 0.85);
+    opacity: 1;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    z-index: 99;
 }
 
 .aussie2{
@@ -92,16 +154,33 @@ img{
     right: 400px;
 }
 
-.newzeland1{
+/* .newzeland1{
     position: fixed;
     bottom: 85px;
     right: 80px;
-}
+} */
 
 .newzeland2{
     position: fixed;
     bottom: 35px;
     right: 125px;
+}
+
+.newzelandcontent1{
+    position: fixed;
+    bottom: 35px;
+    right: 125px;
+}
+
+.newzelandcontent1:hover{
+    background-color:rgba(204, 204, 204, 0.85);
+    opacity: 1;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    z-index: 99;
 }
 
 .france1{
@@ -110,10 +189,44 @@ img{
     left: 880px;
 }
 
+.francecontent1{
+    position: fixed;
+    top: 365px;
+    left: 880px;
+}
+
+.francecontent1:hover{
+    background-color:rgba(204, 204, 204, 0.85);
+    opacity: 1;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    z-index: 99;
+}
+
 .india1{
     position: fixed;
     top: 425px;
     right: 575px;
+}
+
+.indiacontent1{
+    position: fixed;
+    top: 425px;
+    right: 575px;
+}
+
+.indiacontent1:hover{
+    background-color:rgba(204, 204, 204, 0.85);
+    opacity: 1;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    z-index: 99;
 }
 
 /* label, legend, header, button, select, input{
@@ -209,7 +322,7 @@ input[type="radio"] {
     color: white;
 }
 
-.box{
+/* .box{
     display: block;
     border: solid 1px #0000FF;
     width: 100px;
@@ -237,4 +350,4 @@ input[type="radio"] {
         margin-left: 25%;
         width: 150%;
     }
-}
+} */
